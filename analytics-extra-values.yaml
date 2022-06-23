@@ -1,0 +1,14 @@
+spec:
+  storage:
+  data:
+    volumeClaimTemplate:
+      storageClassName: ...
+      volumeSize: 
+  mq:
+    enabled: true
+    kafka:
+      volumeClaimTemplate:
+        storageClassName: local-storage
+    zk:
+      volumeClaimTemplate:
+        storageClassName: local-storage
