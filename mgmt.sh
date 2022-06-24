@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 source `dirname $0`/params.sh
 

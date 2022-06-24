@@ -5,7 +5,7 @@ LICENSE_USE=nonproduction
 DOMAIN=nsb.local
 DNS_SERVERS='161.26.0.7,161.26.0.8'
 SSH_KEY='~/.ssh/id_rsa.1.pub'
-PASSWORD=
+PASSWORD=${PASSWORD:-test@12345}
 SUBNET_MASK=255.255.255.0                                                                                                          
 GATEWAY=192.0.1.1
 
