@@ -11,7 +11,7 @@ apicup subsys set mgmt platform-api=platform-api.$MGMT_HOSTNAME.$DOMAIN
 apicup subsys set mgmt consumer-api=consumer-api.$MGMT_HOSTNAME.$DOMAIN
 apicup subsys set mgmt cloud-admin-ui=cloud-admin-ui.$MGMT_HOSTNAME.$DOMAIN
 apicup subsys set mgmt api-manager-ui=api-manager-ui.$MGMT_HOSTNAME.$DOMAIN
-apicup subsys set mgmt hub=hub.test-apic-mgr.$DOMAIN
+apicup subsys set mgmt hub=hub.$MGMT_HOSTNAME.$DOMAIN
 apicup subsys set mgmt turnstile=turnstile.$MGMT_HOSTNAME.$DOMAIN
 apicup subsys set mgmt ssh-keyfiles=$SSH_KEY
 hashed_pass=$(mkpasswd --method=sha-512 --rounds=4096 "$PASSWORD")

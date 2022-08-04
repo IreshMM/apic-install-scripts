@@ -1,22 +1,22 @@
 #!/bin/bash
 
 # Common params
-LICENSE_USE=nonproduction
+LICENSE_USE=production
 DOMAIN=nsb.local
-DNS_SERVERS='161.26.0.7,161.26.0.8'
-SSH_KEY='~/.ssh/id_rsa.1.pub'
+DNS_SERVERS='10.1.2.5'
+SSH_KEY='~/.ssh/id_rsa.pub'
 PASSWORD=${PASSWORD:-test@12345}
 SUBNET_MASK=255.255.255.0                                                                                                          
-GATEWAY=192.0.1.1
+GATEWAY="192.168.70.1"
 
 # Management subsystem
-MGMT_HOST_IP=192.0.1.10
-MGMT_HOSTNAME=test-apic-mgr
+MGMT_HOST_IP="192.168.70.11"
+MGMT_HOSTNAME=pr-apic-mgr
 
 # Analytics subsystem
-ANALYT_HOST_IP=192.0.1.11
-ANALYT_HOSTNAME=test-apic-anytcs
+ANALYT_HOST_IP="192.168.70.12"
+ANALYT_HOSTNAME=pr-apic-anytcs
 
 # Developer portal subsystem
-PORT_HOST_IP=192.0.1.12
-PORT_HOSTNAME=test-apic-devptl
+PORT_HOST_IP="192.168.70.13"
+PORT_HOSTNAME=pr-apic-devptl
