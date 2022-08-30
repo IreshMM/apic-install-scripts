@@ -1,6 +1,7 @@
 #!/bin/bash -x
 
-source `dirname $0`/params.sh
+SCRIPT_ROOT="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+source ${SCRIPT_ROOT}/params.sh
 
 apicup subsys create mgmt management
 apicup subsys set mgmt deployment-profile=n1xc4.m16
