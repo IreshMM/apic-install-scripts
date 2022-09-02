@@ -3,8 +3,8 @@
 # Common params
 LICENSE_USE=production
 DOMAIN=nsb.local
-DNS_SERVERS='10.1.220.74,10.1.220.75,10.1.220.76,172.17.220.75'
-SSH_KEY='~/.ssh/id_rsa.1.pub'
+DNS_SERVERS='10.1.2.5'
+SSH_KEY='~/.ssh/id_rsa.pub'
 PASSWORD=${PASSWORD:-test@12345}
 SUBNET_MASK=255.255.255.128
 GATEWAY="192.168.72.1"
