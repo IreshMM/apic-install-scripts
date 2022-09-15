@@ -1,0 +1,18 @@
+#!/bin/bash -x
+
+PASSIVE_SITE_NAME=dr
+ACTIVE_SITE_NAME=primary
+SUBNET_MASK=255.255.255.128
+GATEWAY=192.168.172.1
+
+# Management subsystem
+MGMT_NAME="mgmt-${PASSIVE_SITE_NAME}"
+MGMT_HOST_IP='192.168.172.11'
+
+# Analytics subsystem
+ANALYT_NAME="analyt-${PASSIVE_SITE_NAME}"
+ANALYT_HOST_IP='192.168.172.12'
+
+# Developer portal subsystem
+PORT_NAME="port-${PASSIVE_SITE_NAME}"
+PORT_HOST_IP='192.168.172.13'
