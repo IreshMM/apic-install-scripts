@@ -2,7 +2,7 @@
 
 # Common params
 LICENSE_USE=production
-DOMAIN=nsb.local
+DOMAIN=apic.nsb.local
 DNS_SERVERS=${DNS_SERVERS:-'10.1.2.5'}
 SSH_KEY='~/.ssh/id_rsa.pub'
 PASSWORD=${PASSWORD:-'test@12345'}
