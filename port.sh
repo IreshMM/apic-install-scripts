@@ -6,8 +6,8 @@ source ${SCRIPT_ROOT}/params.sh
 apicup subsys create $PORT_NAME portal
 apicup subsys set $PORT_NAME deployment-profile=n1xc2.m8
 apicup subsys set $PORT_NAME license-use=$LICENSE_USE
-apicup subsys set $PORT_NAME portal-admin=portal-admin.$PORT_HOSTNAME.$DOMAIN
-apicup subsys set $PORT_NAME portal-www=portal-www.$PORT_HOSTNAME.$DOMAIN
+apicup subsys set $PORT_NAME portal-admin=portal-admin.$PORT_ENDPOINTS_SUBDOMAIN.$DOMAIN
+apicup subsys set $PORT_NAME portal-www=portal-www.$PORT_ENDPOINTS_SUBDOMAIN.$DOMAIN
 apicup subsys set $PORT_NAME search-domain=$DOMAIN
 apicup subsys set $PORT_NAME dns-servers=$DNS_SERVERS
 apicup subsys set $PORT_NAME ssh-keyfiles=$SSH_KEY

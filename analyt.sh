@@ -7,8 +7,8 @@ apicup subsys create $ANALYT_NAME analytics
 apicup subsys set $ANALYT_NAME deployment-profile=n1xc2.m16
 apicup subsys set $ANALYT_NAME license-use=$LICENSE_USE
 apicup subsys set $ANALYT_NAME enable-message-queue=false
-apicup subsys set $ANALYT_NAME analytics-client=analytics-client.$ANALYT_HOSTNAME.$DOMAIN
-apicup subsys set $ANALYT_NAME analytics-ingestion=analytics-ingestion.$ANALYT_HOSTNAME.$DOMAIN
+apicup subsys set $ANALYT_NAME analytics-client=analytics-client.$ANALYT_ENDPOINTS_SUBDOMAIN.$DOMAIN
+apicup subsys set $ANALYT_NAME analytics-ingestion=analytics-ingestion.$ANALYT_ENDPOINTS_SUBDOMAIN.$DOMAIN
 apicup subsys set $ANALYT_NAME search-domain=$DOMAIN
 apicup subsys set $ANALYT_NAME dns-servers=$DNS_SERVERS
 apicup subsys set $ANALYT_NAME ssh-keyfiles=$SSH_KEY
