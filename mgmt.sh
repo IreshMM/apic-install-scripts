@@ -19,3 +19,7 @@ hashed_pass=$(mkpasswd --method=sha-512 --rounds=4096 "$PASSWORD")
 apicup subsys set $MGMT_NAME default-password="$hashed_pass"
 apicup hosts create $MGMT_NAME $MGMT_HOSTNAME.$DOMAIN "$PASSWORD"
 apicup iface create $MGMT_NAME $MGMT_HOSTNAME.$DOMAIN eth0 $MGMT_HOST_IP/$SUBNET_MASK $GATEWAY
+
+# Backup configuration
+apicup subsys set $MGMT_NAME database-backup-protocol=local
+apicup subsys set $MGMT_NAME database-backup-schedule='0 0 * * *'
