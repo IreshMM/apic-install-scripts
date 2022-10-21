@@ -9,11 +9,14 @@ DNS_SERVERS='10.1.4.5'
 # Management subsystem
 MGMT_NAME="mgmt-${PASSIVE_SITE_NAME}"
 MGMT_HOST_IP='192.168.172.11'
+MGMT_HOSTNAME='dr-apic-mgr'
 
 # Analytics subsystem
 ANALYT_NAME="analyt-${PASSIVE_SITE_NAME}"
 ANALYT_HOST_IP='192.168.172.12'
+ANALYT_HOSTNAME='dr-apic-anytcs'
 
 # Developer portal subsystem
 PORT_NAME="port-${PASSIVE_SITE_NAME}"
 PORT_HOST_IP='192.168.172.13'
+PORT_HOSTNAME='dr-apic-devptl'
