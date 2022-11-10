@@ -17,3 +17,13 @@ apicup subsys set $ANALYT_NAME default-password="$hashed_pass"
 apicup hosts create $ANALYT_NAME $ANALYT_HOSTNAME.$DOMAIN "$PASSWORD"
 apicup iface create $ANALYT_NAME $ANALYT_HOSTNAME.$DOMAIN  eth0 $ANALYT_HOST_IP/$SUBNET_MASK $GATEWAY
 # apicup subsys set $ANALYT_NAME extra-values-file=${SCRIPT_ROOT}/analytics-extra-values.yaml
+
+
+# Backup configuration
+apicup subsys set $ANALYT_NAME analytics-backup-auth-pass=$COS_ACCESS_KEY
+apicup subsys set $ANALYT_NAME analytics-backup-auth-user=$COS_ACCESS_KEY_ID
+apicup subsys set $ANALYT_NAME analytics-backup-host=s3.direct.eu-de.cloud-object-storage.appdomain.cloud
+apicup subsys set $ANALYT_NAME analytics-backup-path=analyt-backup
+apicup subsys set $ANALYT_NAME analytics-backup-chunk-size=1GB
+apicup subsys set $ANALYT_NAME analytics-backup-schedule='0 0 * * *'
+

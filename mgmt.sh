@@ -21,5 +21,11 @@ apicup hosts create $MGMT_NAME $MGMT_HOSTNAME.$DOMAIN "$PASSWORD"
 apicup iface create $MGMT_NAME $MGMT_HOSTNAME.$DOMAIN eth0 $MGMT_HOST_IP/$SUBNET_MASK $GATEWAY
 
 # Backup configuration
-apicup subsys set $MGMT_NAME database-backup-protocol=local
-apicup subsys set $MGMT_NAME database-backup-schedule='0 0 * * *'
+apicup subsys set $MGMT_NAME database-backup-protocol=objstore
+apicup subsys set $MGMT_NAME database-backup-auth-pass=$COS_ACCESS_KEY
+apicup subsys set $MGMT_NAME database-backup-auth-user=$COS_ACCESS_KEY_ID
+apicup subsys set $MGMT_NAME database-backup-s3provider=ibm
+apicup subsys set $MGMT_NAME database-backup-host=s3.direct.eu-de.cloud-object-storage.appdomain.cloud/eu-standard
+apicup subsys set $MGMT_NAME database-backup-path=mgmt-backup
+apicup subsys set $MGMT_NAME database-backup-schedule="0 0 * * *"
+apicup subsys set $MGMT_NAME database-backup-repo-retention-full=3
