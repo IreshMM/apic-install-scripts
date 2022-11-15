@@ -8,7 +8,3 @@ cd "$PROJECT_NAME"
 ${SCRIPT_ROOT}/mgmt-active.sh
 ${SCRIPT_ROOT}/analyt-active.sh
 ${SCRIPT_ROOT}/port-active.sh
-${SCRIPT_ROOT}/mgmt-passive.sh
-${SCRIPT_ROOT}/analyt-passive.sh
-${SCRIPT_ROOT}/port-passive.sh
-
